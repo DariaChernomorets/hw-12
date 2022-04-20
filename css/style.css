@@ -92,18 +92,23 @@ header{
     text-transform: uppercase;
     font-weight: 700;
     line-height: 55px;
+    margin-bottom: 50px;
 }
 .main-section p{
+    width:520px;
+    height:100px;
     font-size: 16px;
     line-height: 28px;
 }
 .service-image{
     width: 45px;
     height:45px;
+    margin-bottom: 30px;
 }
 .truck-picture,.diamond-picture{
     width: 45px;
     height:35px;
+    margin-top: 50px;
 }
 .service-container{
     display: flex;
@@ -119,16 +124,19 @@ header{
     font-weight: 500;
 }
 .service-block p{
+    width: 295px;
     font-size: 16px;
     line-height: 28px;
 }
 .LearnMore{
     background-color: white;
-    border: solid #d0041a 2px;
-    color: #d0041a;
+    border: solid #ff0000 3px;
+    color: #ee4941;
     padding: 15px 50px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
     margin-top: 50px;
     border-radius: 4px;
 }
