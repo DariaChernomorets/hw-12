@@ -1,4 +1,134 @@
-img{
-    width: 50px;
-    height: 50px;
+body{
+    width: 1600px;
+    margin:0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    background-color: #f6f2f2;
+}
+.header-menu{
+    background-color: #313030;
+    width:1250px;
+    height: 90px;
+    margin: 0 auto;
+}
+#menu-list{
+    list-style: none;
+    width: 500px;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 30px 350px;
+}
+.home{
+    background-color: #ff3f40;
+    width:100px;
+    height:90px;
+    text-align: center;
+    padding-top: 35px;
+}
+.introduction-section{
+    background-color: #f6f2f2;
+}
+.container{
+    width:1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.introduction,.video-introduction{
+    width:50%;
+}
+.video{
+    width:545px;
+    height:350px;
+    margin-left: 75px;
+    box-shadow: 0 24px 38px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.introduction h1 {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.introduction p{
+    width:520px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 35px;
+}
+.button-contact{
+    width:230px;
+    height:60px;
+    background-color: #ff2d2d;
+    border: #ff2d2d solid 2px;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color:#ffffff;
+    margin-top: 70px;
+}
+.service-content{
+    color: #333333;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-section{
+    width: 50%;
+}
+.main-section h1{
+    font-size: 42px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 55px;
+}
+.main-section p{
+    font-size: 16px;
+    line-height: 28px;
+}
+.service-image{
+    width: 45px;
+    height:45px;
+}
+.truck-picture,.diamond-picture{
+    width: 45px;
+    height:35px;
+}
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.service-block{
+    width: 50%;
+}
+.service-block h2{
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+.service-block p{
+    font-size: 16px;
+    line-height: 28px;
+}
+.LearnMore{
+    background-color: white;
+    border: solid #d0041a 2px;
+    color: #d0041a;
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 50px;
+    border-radius: 4px;
 }
