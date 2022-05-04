@@ -30,6 +30,7 @@ body{
     line-height: 24px;
     font-weight: 600;
     text-transform: capitalize;
+    cursor: pointer;
 }
 .red-line{
     border: #ff2d2d solid 1px;
@@ -77,18 +78,18 @@ header a{
 }
 /* Introduction service*/
 
-.introduction-section{
+.introduction__section{
     background-color: #f6f2f2;
     padding: 110px 0;
 }
-.introduction-section .col{
+.introduction__section .col{
     width:50%;
 }
-.introduction-section .row{
+.introduction__section .row{
     column-gap: 110px;
     align-items: center;
 }
-.introduction__text .introduction-title {
+.introduction__text .introduction__title {
     font-size: 60px;
     line-height: 72px;
     font-weight: 800;
@@ -96,16 +97,16 @@ header a{
     letter-spacing: 10px;
     margin-bottom: 35px;
 }
-.introduction__text .intro-description{
+.introduction__text .introduction__description{
     max-width:515px;
     line-height: 28px;
     margin-bottom: 60px;
 }
-.introduction__text .intro-contact{
+.introduction__text .introduction__contact{
     background-color: #ff2d2d;
     color:#ffffff;
 }
-.introduction__text .intro-contact:hover{
+.introduction__text .introduction__contact:hover{
     background-color:transparent ;
     color:#ff2d2d;
     transition: .3s;
@@ -117,22 +118,24 @@ header a{
 }
 
 /*Services section*/
-
-.service-section .container{
+.service__section{
+    padding: 110px 0 0;
+}
+.service__section .container{
+    padding-bottom: 110px;
     border-bottom: #ececec solid 2px;
 }
-.service-section .col{
+.service__section .col{
     width: 50%;
-    padding: 110px 0;
 }
-.service__description .service-title{
+.service__description .service__title{
     font-size: 42px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 55px;
     margin-bottom: 45px;
 }
-.service__description .service-text{
+.service__description .service__text{
     max-width:520px;
     line-height: 28px;
     margin-bottom: 60px;
@@ -150,15 +153,15 @@ header a{
     flex-wrap: wrap;
     row-gap: 55px;
 }
-.service__info .service-block{
+.service__info .service__info-block{
     width: 50%;
 }
-.service-block .service-block-title{
+.service__info-block .service__info-title{
     margin-top: 35px;
     font-size: 24px;
     font-weight: 600;
 }
-.service-block .service-block-text{
+.service__info-block .service__info-text{
     max-width: 295px;
     line-height: 28px;
 }
@@ -182,20 +185,20 @@ header a{
 .product__section-intro .red-line{
     margin: 0 auto 90px;
 }
-.product__section-intro .products-list{
+.product__section-intro .products__section-list{
     display: flex;
     justify-content: center;
     gap: 60px;
     margin-bottom: 60px;
 }
-.product__section-intro .products-list a{
+.product__section-intro .products__section-list a{
     font-size: 22px;
     line-height: 24px;
     text-transform: uppercase;
     font-weight: 500;
 }
-.products-list a:hover,
-.products-list .active-from-list a{
+.products__section-list a:hover,
+.products__section-list .active-from-list a{
    color: #ff2d2d;
     transition: .3s;
 }
@@ -204,7 +207,7 @@ header a{
     flex-wrap: wrap;
     gap: 20px;
 }
-.product-item{
+.product__item{
     width: calc(25% - 20px);
 }
 
@@ -233,17 +236,17 @@ header a{
 .team__pictures-section .main-picture-section{
     width: 25%;
 }
-.person-info .person-info-title{
+.person__info .person__info-title{
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 25px;
 }
-.person-info .person-info-text{
+.person__info .person__info-text{
     line-height: 28px;
     margin-bottom: 35px;
 }
-.person-info .person-sm-list{
+.person__info .person__sm-list{
     display: flex;
     gap: 30px;
     font-size: 18px;
@@ -251,22 +254,29 @@ header a{
     font-style: italic;
     margin-bottom: 50px;
 }
+.person__info .person__sm-list a:hover{
+    color: #ee4941;
+}
 .add-pictures-section{
     display: flex;
     gap:20px;
 }
-.name-on-pic {
-    position: relative;
-    background-color: #7a786e;
-    margin-top: -40px;
-}
-.name-on-pic p{
+.name-on-pic .person-name {
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #ffffff;
+    color: transparent;
     text-align: center;
+}
+.name-on-pic{
     height: 40px;
+    margin-top: -28px;
+}
+.name-on-pic .person-name:hover {
+    color: white;
+    background-color: #7a786e;
+    position: relative;
+    transition: .3s;
 }
 
 /*Subscribe section */
@@ -310,6 +320,11 @@ padding: 55px 230px 140px;
     margin-left: 20px;
     padding: 25px 60px;
 }
+.subscribe-form .subscribe-button:hover{
+    background-color:transparent ;
+    color:#ff2d2d;
+    transition: .3s;
+}
 /* Contact section*/
 .contact__section{
     padding: 110px 0;
@@ -325,9 +340,6 @@ padding: 55px 230px 140px;
 }
 .contact__form-preview .red-line{
     margin-bottom: 75px;
-}
-.contact-form{
-    width:60%;
 }
 .contact__section .row{
     gap: 110px;
@@ -349,19 +361,28 @@ padding: 55px 230px 140px;
     height: 253px;
     padding-top: 35px;
     margin-bottom: 45px;
+    resize: none;
 
 }
 .contact-form .submit-contact-form{
-    padding: 20px 301px;
+    padding-top: 20px;
     background-color: #ff3b3b;
     color: white;
     text-transform: uppercase;
+    width: 100%;
+}
+.contact-form .submit-contact-form:hover{
+    background-color:transparent;
+    color:  #ff3b3b;
+    transition: .3s;
 }
 .contact__address-info{
     background-color: #2d2d2d;
+
 }
 .contact__address-info .contact__address-block{
     padding: 145px 30px 70px 80px;
+
 }
 .contact__address-info .contact__address-title{
     color: #e0e0e0;
@@ -373,14 +394,22 @@ padding: 55px 230px 140px;
 }
 .contact__address-info .contact__address-text{
     color: #e0e0e0;
-    max-width: 290px;
+    width: 290px;
     margin-bottom: 35px;
     font-style:normal;
 }
-
+.contact__section .wrapper:after {
+    content: ' ';
+    height: 483px;
+    width: 300px;
+    background-color: #2d2d2d;
+    position: absolute;
+    display: block;
+    left:82%;
+}
 footer{
     background-color: #313030;
-    padding: 50px 0 30px 0;
+    padding: 45px 0 30px 0;
 }
 footer .footer__block{
     display: flex;
