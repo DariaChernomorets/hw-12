@@ -269,10 +269,9 @@ header a{
     text-align: center;
 }
 .name-on-pic{
-    height: 40px;
     margin-top: -28px;
 }
-.name-on-pic .person-name:hover {
+.add-picture:hover >.name-on-pic .person-name{
     color: white;
     background-color: #7a786e;
     position: relative;
@@ -309,6 +308,10 @@ padding: 55px 230px 140px;
     border-radius: 2px;
     padding-left: 35px;
 }
+#email:focus{
+    border: #ff2d2d solid 3px;
+
+}
 .subscribe-form .subscribe-button{
     background-color: #ff2d2d;
     border: #ff2d2d solid 2px;
@@ -328,6 +331,7 @@ padding: 55px 230px 140px;
 /* Contact section*/
 .contact__section{
     padding: 110px 0;
+    overflow-x: hidden;
 }
 .contact__form-preview .contact__section-title{
     font-size: 42px;
@@ -364,6 +368,12 @@ padding: 55px 230px 140px;
     resize: none;
 
 }
+.contact-form #name:focus,
+.contact-form #mail:focus,
+.contact-form .text-area-contact:focus{
+    border: #ff2d2d solid 3px;
+}
+
 .contact-form .submit-contact-form{
     padding-top: 20px;
     background-color: #ff3b3b;
@@ -378,6 +388,7 @@ padding: 55px 230px 140px;
 }
 .contact__address-info{
     background-color: #2d2d2d;
+    z-index: 1;
 
 }
 .contact__address-info .contact__address-block{
@@ -398,14 +409,18 @@ padding: 55px 230px 140px;
     margin-bottom: 35px;
     font-style:normal;
 }
+.contact__section .wrapper{
+    position: relative;
+}
 .contact__section .wrapper:after {
     content: ' ';
-    height: 483px;
-    width: 300px;
+    width: 100vw;
+    height: 100%;
     background-color: #2d2d2d;
     position: absolute;
     display: block;
-    left:82%;
+    left:100%;
+
 }
 footer{
     background-color: #313030;
